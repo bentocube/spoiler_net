@@ -1,0 +1,23 @@
+{
+"manifest_version": 2,
+    "name": "Spoiler Net",
+    "description": "Chrome extension that replaces 'Game of Thrones' with 'Possible spoilers ahead'",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "http://localhost/",
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "page_action":{
+        "default_icon": "icon.png",
+        "default_title": "Spoiler Net"
+    }
+}
